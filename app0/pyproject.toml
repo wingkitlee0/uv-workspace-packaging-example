@@ -1,0 +1,22 @@
+[project]
+name = "my-app0"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Kit Lee", email = "7000003+wingkitlee0@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "my-commonlib",
+]
+
+[project.scripts]
+my-app0 = "my_app0:main"
+
+[build-system]
+requires = ["uv_build>=0.8.14,<0.9.0"]
+build-backend = "uv_build"
+
+[tool.uv.sources]
+my-commonlib = { workspace = true }
